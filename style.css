@@ -1,0 +1,60 @@
+.navbar-brand img {
+  width: 60px;
+}
+/* Gradient Background Themes */
+.bg-gradient-1 {
+  background: linear-gradient(135deg, #0d1e4c, #c48cb3);
+  color: white;
+  transition: background 0.8s ease-in-out;
+}
+
+.bg-gradient-2 {
+  background: linear-gradient(135deg, #c48cb3, #e5c9d7);
+  color: black;
+  transition: background 0.8s ease-in-out;
+}
+
+.bg-gradient-3 {
+  background: linear-gradient(135deg, #e5c9d7, #83a6ce);
+  color: black;
+  transition: background 0.8s ease-in-out;
+}
+
+.bg-gradient-4 {
+  background: linear-gradient(135deg, #83a6ce, #26415e);
+  color: white;
+  transition: background 0.8s ease-in-out;
+}
+
+.bg-gradient-5 {
+  background: linear-gradient(135deg, #26415e, #0b1b32);
+  color: white;
+  transition: background 0.8s ease-in-out;
+}
+
+.bg-gradient-6 {
+  background: linear-gradient(135deg, #0b1b32, #0d1e4c);
+  color: white;
+  transition: background 0.8s ease-in-out;
+}
+
+/* Optional: Hover Effect */
+.bg-gradient:hover {
+  filter: brightness(1.2);
+  transition: filter 0.3s ease-in-out;
+}
+
+.subciribe {
+  background-image: url(./asset/img/bgr.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.brand-icon img {
+  width: 60px;
+}
+
+.blur-filter {
+  backdrop-filter: blur(8px);
+  background-color: #cccccc17;
+}

@@ -7,13 +7,580 @@
     <!-- Nhung Bootstrap ------------------------->
     <link rel="stylesheet" href="./asset/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
+    <!-- <style>
+      body {
+        min-height: 1000vh; /* Kéo dài trang */
+      }
+    </style> -->
     <title>COURSES</title>
   </head>
-  <body>
+  <body class="bg-gradient-1">
+    <!-- <div class="bg-gradient-1">Nội dung của bạn</div> -->
+
+    <!--*********************** Xây dựng NavBar ***********************----- -->
+    <nav
+      class="navbar navbar-expand-lg bg-dark navbar-dark border-bottom small"
+    >
+      <!-- container để tự co giãn thanh navbar -->
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="https://github.com/KCC-Cara/Project3"
+          target="_blank"
+        >
+          <img src="./asset/img/MyLogo.png" alt="My Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- ul li -> MENU ITEM -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Course</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Thẻ Đăng Nhập 1 -->
+          <div class="me-2 d-flex flex-column gap-1 flex-md-row">
+            <!-- note: mend-2 để dãn khoảng cách, display flex: dãn kịch ra, flex column để xoay trục cross (xếp chồng 2 thẻ đăng nhập), 
+             flew-md-row: khi đạt khoảng cách md thì trục (main cross) quay lại bình thường   -->
+            <a
+              href="https://youtube.com/@congcuong05"
+              target="_blank"
+              class="btn btn-outline-info btn-sm justify-content-center align-content-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 512"
+                width="16px"
+                height="16px"
+                class="me-2"
+              >
+                <path
+                  fill="#74C0FC"
+                  d="M224 48a80 80 0 1 1 0 160 80 80 0 1 1 0-160zm0 208A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 96l91.4 0c65.7 0 120.1 48.7 129 112L49.3 464c8.9-63.3 63.3-112 129-112zm0-48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0zM504 312c0 13.3 10.7 24 24 24s24-10.7 24-24l0-64 64 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-64 0 0-64c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 64-64 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l64 0 0 64z"
+                />
+              </svg>
+              Sign-Up For Free</a
+            >
+            <!-- Thẻ Đăng Nhập 2 -->
+
+            <a
+              href="https://youtube.com/@congcuong05 "
+              target="_blank"
+              class="btn btn-outline-warning btn-sm justify-content-center align-content-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                width="16px"
+                height="16px"
+                class="me-2"
+              >
+                <path
+                  fill="#FFD43B"
+                  d="M352 96l64 0c17.7 0 32 14.3 32 32l0 256c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0c53 0 96-43 96-96l0-256c0-53-43-96-96-96l-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32zm-9.4 182.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L242.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
+                /></svg
+              >Login</a
+            >
+          </div>
+
+          <!-- FORM SEACH -->
+          <form
+            class="d-flex mt-2 mt-lg-0"
+            role="search for.."
+            action="https://youtube.com/@congcuong05"
+            target="_blank"
+          >
+            <input
+              class="form-control form-control-sm me-0"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-secondary btn-sm" type="submit">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                width="16px"
+                height="16px"
+              >
+                <path
+                  fill="#74C0FC"
+                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!--------------------------Kết thúc NavBar------------------------------ -->
+
+
+    <!--------------------------Xây dựng Header-----------------------------  -->
+    <header class="main-header py-5 border-bottom">
+      <div class="container">
+        <div class="row align-items-center gx-md-5">
+          <!-- Khối bên trái có 6 cột -->
+          <div class="col-md-6">
+            <h1 class="fs-1 fw-normal">
+              Life becomes much better <br />if you always keep smiling
+            </h1>
+            <p class="fs-5 fw-light text-secondary">
+              Come on! Let's give it a try right now!
+            </p>
+
+            <a
+              href="https://myaccount.google.com/"
+              target="_blank"
+              class="btn btn-outline-info btn-sm justify-content-center align-content-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 512"
+                width="16px"
+                height="16px"
+                class="me-2"
+              >
+                <path
+                  fill="#74C0FC"
+                  d="M224 48a80 80 0 1 1 0 160 80 80 0 1 1 0-160zm0 208A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 96l91.4 0c65.7 0 120.1 48.7 129 112L49.3 464c8.9-63.3 63.3-112 129-112zm0-48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0zM504 312c0 13.3 10.7 24 24 24s24-10.7 24-24l0-64 64 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-64 0 0-64c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 64-64 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l64 0 0 64z"
+                />
+              </svg>
+              Sign-Up to Get Started</a
+            >
+          </div>
+          <!-- Khối bên phải có 6 cột -->
+          <div class="col-md-6 mt-3 mt-md-0">
+            <div>
+              <img
+                class="rounded-3 w-100"
+                src="./asset/img/gx1-cs.jpg"
+                alt="Anh Gai Xinh"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--------------------------Kết thúc Header-----------------------------  -->
+
+
+    <!--------------------------Xây dựng Site Feature -------------------------->
+    <section class="py-4 border-bottom">
+      <!-- Tạo ra một box chứa (container) bên trong có 1 dòng (row) gồm có 3 cột (col) 
+       mỗi cột chiếm 4 size (tổng 12 size) trong mỗi cột có 2 thẻ div gồm thẻ hình ảnh (img) và thẻ nội dung (p)  -->
+      <div class="container">
+        <div class="row">
+          <!-- Thẻ 1 -->
+          <div class="col-md-4">
+            <div
+              class="feature-item btn-outline-primary border rounded p-3 d-flex align-items-center"
+            >
+              <!-- đặt tên class bất kỳ (feature-item  ) tạo viền (border) cách đều pading-3
+               align-item-center: cho các phần trong border đứng giữa -->
+              <div style="width: 50px">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100033345132933"
+                  target="_blank"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      fill="#74C0FC"
+                      d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"
+                    /></svg
+                ></a>
+              </div>
+              <!-- magin start cách các phần ra 4 -->
+              <div class="ms-4">
+                <h3>CỐNG CƯỜNG.</h3>
+                <p class="small text-light">My Facebook.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Thẻ 2 -->
+          <div class="col-md-4">
+            <div
+              class="feature-item btn-outline-danger border rounded p-3 d-flex align-items-center mt-2 mt-md-0"
+            >
+              <div style="width: 50px">
+                <a href="https://youtube.com/@congcuong05" target="_blank"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512"
+                  >
+                    <path
+                      fill="#f1092c"
+                      d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"
+                    /></svg
+                ></a>
+              </div>
+
+              <div class="ms-4">
+                <h3>CỐNG CƯỜNG.</h3>
+                <p class="small text-light">My Youtube Channel.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Thẻ 3 -->
+          <div class="col-md-4">
+            <div
+              class="feature-item btn-outline-dark border rounded p-3 d-flex align-items-center mt-2 mt-md-0"
+            >
+              <div style="width: 50px">
+                <a href="https://www.tiktok.com/@cc.music05" target="_blank"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                  >
+                    <path
+                      d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"
+                    /></svg
+                ></a>
+              </div>
+
+              <div class="ms-4">
+                <h3>CC-MUSIC05.</h3>
+                <p class="small text-light">My TikTok Channel.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--------------------------Kết thức Site Feature------------------------ -->
+
+
+    <!-- -----------------------Xây dựng phần Course------------------------- -->
+    <section class="py-4 border-bottom">
+      <div class="container">
+        <!-- Dòng trên (row top) -->
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <div class="text-md-center">
+              <h4 class="fs-5">Lorem ipsum dolor sit amet.</h4>
+              <p class="small text-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Architecto natus vero explicabo.
+              </p>
+              <a
+              href="https://myaccount.google.com/"
+              target="_blank"
+              class="btn btn-outline-info btn-sm justify-content-center align-content-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 512"
+                width="16px"
+                height="16px"
+                class="me-2"
+              >
+                <path
+                  fill="#74C0FC"
+                  d="M224 48a80 80 0 1 1 0 160 80 80 0 1 1 0-160zm0 208A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 96l91.4 0c65.7 0 120.1 48.7 129 112L49.3 464c8.9-63.3 63.3-112 129-112zm0-48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0zM504 312c0 13.3 10.7 24 24 24s24-10.7 24-24l0-64 64 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-64 0 0-64c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 64-64 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l64 0 0 64z"
+                />
+              </svg>
+              Sign-Up to Get Started</a
+            </div>
+          </div>
+        </div>
+
+        <!-- Phần khóa học (row course) -->
+         <div class="row mt-4">
+          <!-- Khối trái -->
+          <div class="col-md-3">
+            <div class="list-group">
+              <!-- Tạo một thẻ div nhóm (list-group) trong các group có các item
+              Mỗi item được cài đặt: align-items-center (khi phần khung bị giãn kịch khiến phần thẻ span bị méoméo) 
+              
+              -->
+              <div class="list-group-item bg-light fw-bold">Course</div>
+              <a class="align-items-center list-group-item d-flex justify-content-between" href="#!">Premium
+                <span class="badge rounded-pill text-dark bg-danger">10</span>
+              </a>
+              <a class="align-items-center list-group-item d-flex justify-content-between" href="#!">Free
+                <span class="badge rounded-pill text-dark bg-danger">1</span>
+              </a>
+            </div>
+            <div class="list-group mt-2 mb-3 mb-md-0">
+              <div class="list-group-item bg-light fw-bold">Topics</div>
+              <a class="align-items-center list-group-item d-flex justify-content-between" href="#!">Coding
+                <span class="badge rounded-pill text-dark bg-danger">10</span>
+              </a>
+              <a class="align-items-center list-group-item d-flex justify-content-between" href="#!">Programing
+                <span class="badge rounded-pill text-dark bg-danger">1</span>
+              </a>
+              <a class="align-items-center list-group-item d-flex justify-content-between" href="#!">Design
+                <span class="badge rounded-pill text-dark bg-danger">1</span>
+              </a>
+            </div>
+         </div>
+         <!-- Khối phải -->
+         <div class="col-md-9">
+          <div class="list-group">
+            <div class="align-items-center list-group-item d-flex justify-content-between bg-light fw-bold">
+              List of all course 
+              <span class="badge rounded-pill text-dark bg-danger">24 course</span>
+            </div>
+
+            <!-- course 1 -->
+            <a href="./single-course.html" class="list-group-item list-group-item-action">
+              <div class="row align-items-center">
+                <div class="col-md-4">
+                  <div>
+                      <img src="./asset/img/xinhgai.PNG" alt="" class="rounded img-fluid">
+                 </div>
+
+                </div>
+                <div class="col-md-8">
+                  <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus.</h5>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis possimus eveniet facilis, error reprehenderit ipsum!</p>
+                  <div class="d-inline-flex align-items-center">
+                    <span class="px-2 py-1 rounded-pill text-dark bg-warning me-2 d-inline-flex align-items-center"><svg xmlns="http://www.w3.org/2000/svg" height="10" width="11.25" viewBox="0 0 576 512"><path fill="#000000" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>
+                    </svg> Rating: 4.7</span>
+                    <span class="px-2 py-1 rounded-pill text-dark bg-success">Price: 499$</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!-- course 2 -->
+            <a href="./single-course.html" class="list-group-item list-group-item-action">
+              <div class="row align-items-center">
+                <div class="col-md-4">
+                  <div>
+                      <img src="./asset/img/img-gaixinh3.jpg" alt="" class="rounded img-fluid">
+                 </div>
+
+                </div>
+                <div class="col-md-8">
+                  <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus.</h5>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis possimus eveniet facilis, error reprehenderit ipsum!</p>
+                  <div class="d-inline-flex align-items-center">
+                    <span class="px-2 py-1 rounded-pill text-dark bg-warning me-2 d-inline-flex align-items-center"><svg xmlns="http://www.w3.org/2000/svg" height="10" width="11.25" viewBox="0 0 576 512"><path fill="#000000" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>
+                    </svg> Rating: 5.0</span>
+                    <span class="px-2 py-1 rounded-pill text-dark bg-success">Price: 1999$</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!-- course 3  -->
+            <a href="./single-course.html" class="list-group-item list-group-item-action">
+              <div class="row align-items-center">
+                <div class="col-md-4">
+                  <div>
+                      <img src="./asset/img/img-gaixinh2.jpg" alt="" class="rounded img-fluid">
+                 </div>
+
+                </div>
+                <div class="col-md-8">
+                  <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus.</h5>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis possimus eveniet facilis, error reprehenderit ipsum!</p>
+                  <div class="d-inline-flex align-items-center">
+                    <span class="px-2 py-1 rounded-pill text-dark bg-warning me-2 d-inline-flex align-items-center"><svg xmlns="http://www.w3.org/2000/svg" height="10" width="11.25" viewBox="0 0 576 512"><path fill="#000000" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>
+                    </svg> Rating: 4.8</span>
+                    <span class="px-2 py-1 rounded-pill text-dark bg-success">Price: 599$</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!-- course 4  -->
+            <a href="./single-course.html" class="list-group-item list-group-item-action">
+              <div class="row align-items-center">
+                <div class="col-md-4">
+                  <div>
+                      <img src="./asset/img/img-gaixinh5.jpg" alt="" class="rounded img-fluid">
+                 </div>
+
+                </div>
+                <div class="col-md-8">
+                  <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus.</h5>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis possimus eveniet facilis, error reprehenderit ipsum!</p>
+                  <div class="d-inline-flex align-items-center">
+                    <span class="px-2 py-1 rounded-pill text-dark bg-warning me-2 d-inline-flex align-items-center"><svg xmlns="http://www.w3.org/2000/svg" height="10" width="11.25" viewBox="0 0 576 512"><path fill="#000000" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>
+                    </svg> Rating: 4.9</span>
+                    <span class="px-2 py-1 rounded-pill text-dark bg-success">Price: 499$</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+         </div>
+         </div>
+      </div>
+    </section>
+    <!--------------------------Kết thúc phần Course------------------------- -->
+    
+
+    <!-------------------------Xây dựng phần Subscribe----------------------- -->
+    <section class="subciribe py-5">
+      <div class="container">
+        <div class="row justify-content-center ">
+          <div class="col-md-4">
+            <div class="fw-bold text-light text-center mb-3 mb-md-0 ">
+              <h5>Subcribe For Newsletters</h5>
+            </div>
+          </div>
+          <!-- Form subcribe -->
+          <div class="col-md-4">
+            <form
+            class="d-flex mt-2 mt-lg-0"
+            role="search for.."
+            action="https://youtube.com/@congcuong05"
+            target="_blank"
+          >
+            <input
+              class="form-control form-control-sm me-0"
+              type="Email"
+              placeholder="Your Email"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-info btn-sm d-inline-flex align-items-center" type="submit">
+              <svg class="me-2 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16px" height="16px">
+                <path fill="#74C0FC" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                Subcribe
+              </button>
+          </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ----------------------Kết thúc phần Subscribe-------------------------->
+
+
+    <!-- ----------------------Xây dựng phần main footer--------------------- -->
+     <footer class="text-light bg-dark py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="brand-icon mb-2">
+              <img src="./asset/img/MyLogo.png" alt="">
+            </div>
+            <address class="small text-secondary">
+              Da Nang <br>
+              VietNam <br>
+              43000
+            </address >
+            <p class="small text-secondary">Contact@noodcuonh.com </p>
+          </div>
+          <div class="col-md-5 ">
+            <h6>Follow Me</h6>
+            <div class="d-md-flex justify-content-center m-md-0 align-items-center">
+                 <!-- Thẻ 1 -->
+          <div class="col-md-4">
+            <div
+              class="feature-item btn-outline-primary border rounded p-3 d-flex align-items-center"
+            >
+              <div style="width: 50px">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100033345132933"
+                  target="_blank"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      fill="#74C0FC"
+                      d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"
+                    /></svg
+                ></a>
+              </div>
+              <!-- magin start cách các phần ra 4 -->
+              <div class="ms-4">
+                <p class="small text-light">My Facebook.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Thẻ 2 -->
+          <div class="col-md-4">
+            <div
+              class="feature-item btn-outline-danger border rounded p-3 d-flex align-items-center mt-2 mt-md-0"
+            >
+              <div style="width: 50px">
+                <a href="https://youtube.com/@congcuong05" target="_blank"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512"
+                  >
+                    <path
+                      fill="#f1092c"
+                      d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"
+                    /></svg
+                ></a>
+              </div>
+
+              <div class="ms-4">
+                <p class="small text-light">My Youtube Channel.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Thẻ 3 -->
+          <div class="col-md-4">
+            <div
+              class="feature-item btn-outline-dark border rounded p-3 d-flex align-items-center mt-2 mt-md-0"
+            >
+              <div style="width: 50px">
+                <a href="https://www.tiktok.com/@cc.music05" target="_blank"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                  >
+                    <path
+                      d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"
+                    /></svg
+                ></a>
+              </div>
+
+              <div class="ms-4">
+                <p class="small text-light">My TikTok Channel.</p>
+              </div>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </footer>
+     <!-- --------------------Kết thúc phần main footer---------------------- -->
+
+
+
+     <!-- -------------------Xây dựng phần sticky footer-------------------- -->
+      <div class="d-block d-md-none d-flex justify-content-center p-3 fixed-bottom blur-filter">
+        <!-- fixed-bottom: fix cứng  , blur-filter: tên tự đặt sang phần css chỉnh sửa-->
+        <a href="#!" class="btn btn-warning btn-sm fw-bold rounded-pill px-3 d-inline-flex align-items-center"> 
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16px" height="16px">
+          <path d="M96 128a128 128 0 1 0 256 0A128 128 0 1 0 96 128zm94.5 200.2l18.6 31L175.8 483.1l-36-146.9c-2-8.1-9.8-13.4-17.9-11.3C51.9 342.4 0 405.8 0 481.3c0 17 13.8 30.7 30.7 30.7l131.7 0c0 0 0 0 .1 0l5.5 0 112 0 5.5 0c0 0 0 0 .1 0l131.7 0c17 0 30.7-13.8 30.7-30.7c0-75.5-51.9-138.9-121.9-156.4c-8.1-2-15.9 3.3-17.9 11.3l-36 146.9L238.9 359.2l18.6-31c6.4-10.7-1.3-24.2-13.7-24.2L224 304l-19.7 0c-12.4 0-20.1 13.6-13.7 24.2z"/></svg>
+          Sign-Up For Free</a>
+      </div>
+      <!--------------------Kết thúc phần sticky footer------------------------>
     <!-----Nhung JS BootStrap------------------ -->
-    <link
-      rel="stylesheet"
-      href="./asset/bootstrap/js/bootstrap.bundle.min.js"
-    />
+    <script src="./asset/bootstrap/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
